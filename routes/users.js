@@ -1,5 +1,5 @@
 const {Router} = require ('express');
-const{usersList} = require('../controlers/users');
+const{usersList} = require('../controllers/users');
 const router = Router();
 
 // http://localhost:3000/api/v1/users/
