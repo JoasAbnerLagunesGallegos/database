@@ -12,6 +12,21 @@ const usersModel = {
                         id=?
     
     `,
+    addRow:`
+            INSERT INTO
+            users (
+                username,
+                email,
+                password,
+                name,
+                lastname,
+                phone_number,
+                role_id,
+                is_active
+            )
+            VALUES(
+                ?,?,?,?,?,?,?,?
+            )`,
 };
 
 module.exports = usersModel;
