@@ -27,6 +27,21 @@ const usersModel = {
             VALUES(
                 ?,?,?,?,?,?,?,?
             )`,
+    updateRow:`
+            UPDATE
+                users 
+            SET
+                username=?,
+                email=?,
+                password=?,
+                name=?,
+                lastname=?,
+                phone_number=?,
+                role_id = ?,
+                is_active = ?
+            WHERE
+                id=?
+            `,
     getByUsername: `
                 SELECT
                     id
@@ -42,6 +57,14 @@ const usersModel = {
                     users
                 WHERE 
                     email = ?
+    `,
+    deleteRow: `
+                UPDATE
+                    users
+                SET
+                    is_active = 0
+                WHERE
+                    id=?
     `,
 };
 
