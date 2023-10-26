@@ -44,7 +44,7 @@ const usersModel = {
             `,
     getByUsername: `
                 SELECT
-                    id
+                    *
                 FROM
                     users
                 WHERE 
